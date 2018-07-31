@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  uwsgi:
+    image: btardio/uwsgi
+    ports:
+      - "8900:80"
+    command: gosu encorea uwsgi /uwsgi.ini 
+    restart: always

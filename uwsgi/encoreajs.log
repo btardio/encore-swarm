@@ -1,0 +1,72 @@
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "engineboreinch"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "productfacet"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginestrokeinch"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecc"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginelitersfaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "makefaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "yearfaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecylinder"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "modelfaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "productfacet"} failed.
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginestrokeinch"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "engineboreinch"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginelitersfaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecylinder"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecc"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "modelfaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "makefaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "yearfaceted"} failed.
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN"><html><head><title>503 Service Unavailable</title></head><body><h1>Service Unavailable</h1><p>The server is temporarily unable to service yourrequest due to maintenance downtime or capacityproblems. Please try again later.</p></body></html>
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "productfacet"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginestrokeinch"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "engineboreinch"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecc"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "modelfaceted"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecylinder"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginelitersfaceted"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "makefaceted"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "yearfaceted"} failed.
+undefined
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "engineboreinch"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginestrokeinch"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "productfacet"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginelitersfaceted"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecc"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "enginecylinder"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "yearfaceted"} failed.
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "makefaceted"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1
+http://127.0.0.1/solr/encore1/select?q=*:*&rows=0&facet=true", {"facet.field": "modelfaceted"} failed.
+AttributeError at /makefacetrequest'Settings' object has no attribute 'SERVERS'Request Method: GETRequest URL: http://127.0.0.1:8000/makefacetrequest?facet.mincount=1

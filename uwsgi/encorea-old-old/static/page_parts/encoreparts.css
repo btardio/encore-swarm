@@ -1,0 +1,71 @@
+
+
+.encorepartscontainer {
+
+    background-color:rgb(50,50,50);
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    color: black;
+    
+
+}
+
+.encorepartsdiv {
+    display: inline-block;
+}
+
+#div_year #body_year_select{
+    width: 100px;
+}
+
+#div_make #body_make_select{
+    width: 157px;
+}
+
+#div_model #body_model_select{
+    width: 237px;
+}
+
+#div_product #body_product_select{
+    width: 330px;
+}
+
+
+
+#div_engineliters #body_engineliters_select{
+    width: 100px;
+}
+
+#div_enginecylinder #body_enginecylinder_select{
+    width: 100px;
+}
+
+#div_enginecc #body_enginecc_select{
+    width: 100px;
+}
+
+#div_engineboreinch #body_engineboreinch_select{
+    width: 100px;
+}
+
+#div_enginestrokeinch #body_enginestrokeinch_select{
+    width: 100px;
+}
+
+.encoresort{
+    cursor:pointer;
+}
+
+.encoreproductrow{
+    cursor:pointer;
+}
+
+.ui-tabs-tab .ui-tabs-nav .ui-tabs-anchor{
+    background-color: black!important;
+}
+
+.ui-state-active {
+background: black !important;
+}
+

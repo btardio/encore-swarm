@@ -1,0 +1,521 @@
+<!-- todo: minimize boxes -->
+
+<html>
+<head>
+<title>
+</title>
+
+<script src="/static/encore_parts_page/encoreparts.js" type="text/javascript"></script>
+<link rel="stylesheet" href="/static/page_main/jquery-ui.css">
+<script src="/static/page_main/jquery-1.12.4.js"></script>
+<script src="/static/page_main/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/encore_parts_page/encoreparts.css">
+<link rel="stylesheet" href="/static/page_main/w3.css"> 
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="/static/page_main/bootstrap.min.css">
+<script src="/static/page_main/popper.min.js"></script>
+<script src="/static/page_main/bootstrap.min.js"></script>
+
+<!--
+<script src="/static/encore_parts_page/encoreparts.js" type="text/javascript"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/encore_parts_page/encoreparts.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+-->
+
+<script>
+  
+$( function() {
+/*
+    $( "#sortable" ).sortable({containment: "parent"});
+    $( "#sortable" ).disableSelection();
+    $( "#sortableengine" ).sortable({containment: "parent"});
+    $( "#sortableengine" ).disableSelection();
+*/    
+    //$( "#sortable" ).on( "sort", function( event, ui ) { alert(} );
+    
+} );
+
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  
+  
+$( function() {
+/*
+    $( "#year" ).resizable({handles: "e",containment: "parent"});
+    $( "#make" ).resizable({handles: "e",containment: "parent"});
+    $( "#model" ).resizable({handles: "e",containment: "parent"});
+    $( "#engineliters" ).resizable({handles: "e",containment: "parent"});
+    $( "#enginecylinder" ).resizable({handles: "e",containment: "parent"});
+    $( "#enginecc" ).resizable({handles: "e",containment: "parent"});
+    $( "#engineboreinch" ).resizable({handles: "e",containment: "parent"});
+    $( "#enginestrokeinch" ).resizable({handles: "e",containment: "parent"});
+    $( "#product" ).resizable({handles: "e",containment: "parent"});
+*/
+} );
+
+
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+var csrftoken = getCookie('csrftoken'); 
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+  </script>
+
+</head>
+
+<body>
+
+
+<script>
+
+    var domain = "127.0.0.1"
+
+    $(document).ready(function(){
+
+    
+        fill();
+        
+        setonchange();
+        
+        setclearfilters();
+
+        setbtnclick();
+        //alertfqslist();
+    
+    });
+    
+</script>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Parts Query</a></li>
+    <li><a href="#tabs-2">Parts Detail</a></li>
+    <li><a href="#tabs-3">Part Replacement</a></li>
+  </ul>
+  <div id="tabs-1">
+
+
+<center>
+<div class="encorecontainer">
+  <div id="div_year" class="ui-state-default encorepartsdiv">
+    <div id="year" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Year <span id="clrselectyear" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+        
+        <div class="encoreselectdiv" id="body_year">
+            <select class="encoreselect" id="body_year_select" size="9" multiple>
+
+            </select>
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_make" class="ui-state-default encorepartsdiv">
+    <div id="make" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Make <span id="clrselectmake" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+        
+        <div class="encoreselectdiv" id="body_make">
+            <select class="encoreselect" id="body_make_select" size="9" multiple>
+
+            </select>        
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_model" class="ui-state-default encorepartsdiv">
+    <div id="model" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Model <span id="clrselectmodel" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+        
+        <div class="encoreselectdiv" id="body_model">
+        
+            <select class="encoreselect" id="body_model_select" size="9" multiple>
+
+            </select>        
+        
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_product" class="ui-state-default encorepartsdiv">
+    <div id="product" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Product <span id="clrselectproduct" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+        
+        <div class="encoreselectdiv" id="body_product">
+        
+            <select class="encoreselect" id="body_product_select" size="9" multiple>
+
+            </select>        
+        
+        </div>
+        
+    </div>
+  </div>  
+  
+</div>
+</center>
+
+
+<center>
+<div class="encorecontainer">
+
+  <div id="div_engineliters" class="ui-state-default encorepartsdiv">
+    <div id="engineliters" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Liters <span id="clrselectliters" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+        
+        <div class="encoreselectdiv" id="body_engineliters">
+
+            <select class="encoreselect" id="body_engineliters_select" size="9" multiple>
+
+            </select>        
+            
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_enginecylinder" class="ui-state-default encorepartsdiv">
+    <div id="enginecylinder" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Cylinders <span id="clrselectcylinders" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+
+        <div class="encoreselectdiv" id="body_enginecylinder">
+        
+            <select class="encoreselect" id="body_enginecylinder_select" size="9" multiple>
+
+            </select>       
+        
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_enginecc" class="ui-state-default encorepartsdiv">
+    <div id="enginecc" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">CC <span id="clrselectcc" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+
+        <div class="encoreselectdiv" id="body_enginecc">
+            <select class="encoreselect" id="body_enginecc_select" size="9" multiple>
+
+            </select>               
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_engineboreinch" class="ui-state-default encorepartsdiv">
+    <div id="engineboreinch" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Bore <span id="clrselectbore" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+
+        <div class="encoreselectdiv" id="body_engineboreinch">
+            <select class="encoreselect" id="body_engineboreinch_select" size="9" multiple>
+
+            </select>            
+        </div>
+        
+    </div>
+  </div>
+  <div id="div_enginestrokeinch" class="ui-state-default encorepartsdiv">
+    <div id="enginestrokeinch" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Stroke <span id="clrselectstroke" class="encoresort"><span style="font-size:14px;" class="ui-icon ui-icon-circlesmall-close"></span></span></h3>
+
+        <div class="encoreselectdiv" id="body_enginestrokeinch">
+            <select class="encoreselect" id="body_enginestrokeinch_select" size="9" multiple>
+
+            </select>         
+        </div>
+        
+    </div>
+  </div>
+  
+</div>
+</center>
+
+
+<br><br>
+<center>
+
+<div style="text-align:center;width:100%;" id="encoreparts">
+
+    
+
+</div>
+
+</center>
+
+
+
+<!-- tabs -->
+  </div>
+  <div id="tabs-2">
+<!-- end tabs -->
+
+<input id="encorepartinputid" class="w3-input" type="text">
+<label>Part Number</label>
+<br>
+<button id="encorepartdetailsearchbtn" class="w3-button w3-black">Search</button>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg">
+      <div style="text-align:center;width:100%;" id="encorepartdetail">
+      </div>
+    </div>
+    <div class="col-lg">
+      <div style="text-align:center;width:100%;" id="encorepartoem">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- tabs -->
+  </div>
+  <div id="tabs-3">
+<!-- end tabs -->
+    
+    <input id="encoreoempartinputid" class="w3-input" type="text">
+    <label>Original Part Number</label>
+    <br>
+    <button id="encoreoempartsearchbtn" class="w3-button w3-black">Search</button>
+    <br><br>
+    <div style="text-align:center;width:100%;" id="encorepartoembody">
+    </div>
+
+  </div>
+</div>
+
+
+
+<!--
+<center>
+<div id="sortablecontainer" class="encorecontainerclass">
+<div id="sortable" class="encoreul">
+  <div id="li_year" class="ui-state-default encoreli">
+    <div id="year" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Year</h3>
+        
+        <div class="encoreselectdiv" id="body_year">
+            <select class="encoreselect" id="body_year_select" size="9" multiple>
+
+            </select>
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_make" class="ui-state-default encoreli">
+    <div id="make" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Make</h3>
+        
+        <div class="encoreselectdiv" id="body_make">
+            <select class="encoreselect" id="body_make_select" size="9" multiple>
+
+            </select>        
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_model" class="ui-state-default encoreli">
+    <div id="model" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Model</h3>
+        
+        <div class="encoreselectdiv" id="body_model">
+        
+            <select class="encoreselect" id="body_model_select" size="9" multiple>
+
+            </select>        
+        
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_product" class="ui-state-default encoreli">
+    <div id="product" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Product</h3>
+        
+        <div class="encoreselectdiv" id="body_product">
+        
+            <select class="encoreselect" id="body_product_select" size="9" multiple>
+
+            </select>        
+        
+        </div>
+        
+    </div>
+  </div>  
+</div>
+</div>
+</center>
+
+<div id="sortableenginecontainer">
+<div id="sortableengine" class="encoreul">
+  <div id="li_engineliters" class="ui-state-default encoreli">
+    <div id="engineliters" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Liters</h3>
+        
+        <div class="encoreselectdiv" id="body_engineliters">
+
+            <select class="encoreselect" id="body_engineliters_select" size="9" multiple>
+
+            </select>        
+            
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_enginecylinder" class="ui-state-default encoreli">
+    <div id="enginecylinder" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Cylinders</h3>
+
+        <div class="encoreselectdiv" id="body_enginecylinder">
+        
+            <select class="encoreselect" id="body_enginecylinder_select" size="9" multiple>
+
+            </select>       
+        
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_enginecc" class="ui-state-default encoreli">
+    <div id="enginecc" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">CC</h3>
+
+        <div class="encoreselectdiv" id="body_enginecc">
+            <select class="encoreselect" id="body_enginecc_select" size="9" multiple>
+
+            </select>               
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_engineboreinch" class="ui-state-default encoreli">
+    <div id="engineboreinch" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Bore</h3>
+
+        <div class="encoreselectdiv" id="body_engineboreinch">
+            <select class="encoreselect" id="body_engineboreinch_select" size="9" multiple>
+
+            </select>            
+        </div>
+        
+    </div>
+  </div>
+  <div id="li_enginestrokeinch" class="ui-state-default encoreli">
+    <div id="enginestrokeinch" class="ui-widget-content encoreresizeable">
+        <h3 class="ui-widget-header">Stroke</h3>
+
+        <div class="encoreselectdiv" id="body_enginestrokeinch">
+            <select class="encoreselect" id="body_enginestrokeinch_select" size="9" multiple>
+
+            </select>         
+        </div>
+        
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+<br><br>
+<div id="encoreparts">
+
+    
+
+</div>-->
+
+<!--
+<div>
+
+    <span class="ui-state-default encorepartsbox">
+
+        <div class="encorepartsinner">
+        
+            <span class="encorepartsinnertitle">
+                title
+            </span>
+            
+            <span class="encorepartsinnerminimize">
+                minimize -
+            </span>
+        
+        </div>
+
+
+    </span>
+
+    <span class="ui-state-default encorepartsbox">
+
+        <div class="encorepartsinner">
+        
+            <span class="encorepartsinnertitle">
+                title
+            </span>
+            
+            <span class="encorepartsinnerminimize">
+                minimize -
+            </span>
+        
+        </div>
+
+
+    </span>
+    
+    
+    <span class="ui-state-default encorepartsbox">
+
+        <div class="encorepartsinner">
+        
+            <span class="encorepartsinnertitle">
+                title
+            </span>
+            
+            <span class="encorepartsinnerminimize">
+                minimize -
+            </span>
+        
+        </div>
+
+
+    </span>
+</div>
+
+-->
+
+</body>
+
+</html>
+

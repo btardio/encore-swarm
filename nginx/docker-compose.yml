@@ -1,0 +1,19 @@
+#version: '3.3'
+#services:
+#  nginx:
+#    image: btardio/nginx
+#    ports:
+#      - "8920:80"
+#    entrypoint:
+#      - nginx
+
+version: '3.3'
+services:
+  nginx:
+    image: btardio/nginx
+    ports:
+      - "8920:80"
+    command: "nginx -g 'daemon off;'"
+    restart: always
+    #entrypoint:
+    #  - nginx -g "daemon off;"

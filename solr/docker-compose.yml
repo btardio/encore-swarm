@@ -1,0 +1,31 @@
+version: '3'
+services:
+  solr:
+    image: btardio/solr
+    #hostname: solr
+    ports:
+      - "8983:8983"
+        #command: docker-entrypoint.sh solr start -f -c -p 8983 -z 54.183.245.123:2181,54.183.245.123:2182,54.183.245.123:2183 
+    command: docker-entrypoint.sh solr start -f -c -p 8983 -z 192.168.0.52:2181,192.168.0.52:2182,192.168.0.52:2183
+    volumes:
+      - solr-cores:/solr_data
+        #networks:
+        #- zksolr-network
+        #    depends_on:
+        #- "zookeeper_zoo1"
+        #- "zookeeper_zoo2"
+        #- "zookeeper_zoo3"
+    #./docker-entrypoint.sh solr start -f -c -p 8983
+    #entrypoint:
+    #  - ./docker-entrypoint.sh
+    #  - solr
+    #  - start
+    #  - "-f"
+    #  - "-c"
+    #  - "-p"
+    #  - "8983"
+    #
+    #networks:
+    #zksolr-network:
+volumes:
+  solr-cores:

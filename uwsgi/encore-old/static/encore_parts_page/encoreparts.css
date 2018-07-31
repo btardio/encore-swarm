@@ -1,0 +1,75 @@
+.encorepartsouterbox {
+    
+    border: 2px solid green;
+    padding: 2px;
+    margin: 2px;
+    
+    
+}
+
+.encorepartsinner {
+    
+    border: 2px solid green;
+    padding: 2px;
+    margin: 2px;
+    display: inline-block;
+    
+}
+
+
+.encorepartsinnertitle {
+    
+    border: 2px solid green;
+    padding: 2px;
+    margin: 2px;
+
+    
+}
+
+.encorepartsinnerminimize {
+    
+    border: 2px solid green;
+    padding: 2px;
+    margin: 2px;
+
+    
+}
+
+
+/*
+  ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
+  li { margin: 5px; padding: 5px; width: 150px; }
+  
+  
+    .ui-state-highlight { height: 1.5em; line-height: 1.2em; }
+    
+*/    
+    
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 1300px; }
+#sortable li { border: 2px solid green; margin: 3px 3px 3px 0; padding: 1px; float: left; /*width: 200px;*/ height: 110px; font-size: 15px; text-align: center; }
+.encoreresizeable { width: 150px; height: 100px; padding: 0.5em; }
+.encoreresizeable h3 { text-align: center; margin: 0; }
+  
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+	font-size: 1em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+
+.encoreright{
+    float:right;
+    background:inherit;
+}
+
+.encoreleft{
+    float:left;
+    background:inherit;
+}
+
