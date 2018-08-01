@@ -1,0 +1,453 @@
+./solr config -action set-property -property solr.data.dir -value "/solr_data/" -c "a" -zkHost 127.0.0.1:2181
+
+
+
+curl -X POST -H 'Content-type:application/json' --data-binary '{
+
+
+  "add-field-type":[
+  {
+     "name":"encoreNGramTextField",
+     "class":"solr.TextField",
+     "indexAnalyzer":{
+
+        "tokenizer":{
+           "class":"solr.StandardTokenizerFactory" 
+        },
+
+        "filters":[
+            {
+                "class":"solr.LowerCaseFilterFactory"
+            },
+            {
+                "class":"solr.NGramTokenizerFactory",
+                "minGramSize":"3",
+                "maxGramSize":"100",
+            }
+        ],
+            
+     },
+     "queryAnalyzer":{
+        "tokenizer":{
+           "class":"solr.StandardTokenizerFactory" 
+        }
+        "filters":[
+            {
+                "class":"solr.LowerCaseFilterFactory"
+            },
+            {
+                "class":"solr.NGramTokenizerFactory",
+                "minGramSize":"3",
+                "maxGramSize":"100",
+            }
+        ],
+        
+     }
+  },
+
+  {
+     "name":"encoreNGramTextFieldSm",
+     "class":"solr.TextField",
+     "indexAnalyzer":{
+
+        "tokenizer":{
+           "class":"solr.StandardTokenizerFactory" 
+        },
+
+        "filters":[
+            {
+                "class":"solr.LowerCaseFilterFactory"
+            },
+            {
+                "class":"solr.NGramTokenizerFactory",
+                "minGramSize":"2",
+                "maxGramSize":"100",
+            }
+        ],
+            
+     },
+     "queryAnalyzer":{
+        "tokenizer":{
+           "class":"solr.StandardTokenizerFactory" 
+        }
+        "filters":[
+            {
+                "class":"solr.LowerCaseFilterFactory"
+            },
+            {
+                "class":"solr.NGramTokenizerFactory",
+                "minGramSize":"2",
+                "maxGramSize":"100",
+            }
+        ],
+        
+     }
+  },
+  
+  
+
+  {
+     "name":"encorepartnumber",
+     "class":"solr.TextField",
+     "indexAnalyzer":{
+
+        "tokenizer":{
+           "class":"solr.KeywordTokenizerFactory" 
+        },
+
+        "filters":[
+            
+            {
+                "class":"solr.WordDelimiterGraphFilterFactory",
+                "preserveOriginal":"0",
+                "catenateAll":"1",
+                "generateWordParts":"0",
+                "generateNumberParts":"0",
+                "splitOnCaseChange":"0",
+                "splitOnNumerics":"0",
+                "catenateWords":"1",
+                "catenateNumbers":"1",
+                
+            },
+            
+            {
+                "class":"solr.FlattenGraphFilterFactory",
+
+            },
+            
+            {
+                "class":"solr.LowerCaseFilterFactory"
+            },
+            
+        ],
+            
+     },
+     "queryAnalyzer":{
+        "tokenizer":{
+           "class":"solr.KeywordTokenizerFactory" 
+        }
+        "filters":[
+
+            
+            {
+                "class":"solr.WordDelimiterGraphFilterFactory",
+                "preserveOriginal":"0",
+                "catenateAll":"1",
+                "generateWordParts":"0",
+                "generateNumberParts":"0",
+                "splitOnCaseChange":"0",
+                "splitOnNumerics":"0",
+                "catenateWords":"1",
+                "catenateNumbers":"1",
+            },
+            
+            {
+                "class":"solr.FlattenGraphFilterFactory",
+
+            },
+            
+            {
+                "class":"solr.LowerCaseFilterFactory"
+            },
+            
+      
+        ],
+        
+     }
+  },  
+  
+  {
+     "name":"encorefaceted",
+     "class":"solr.StrField",
+  },
+  
+  {
+     "name":"encorestring",
+     "class":"solr.StrField",
+  },
+  
+  {
+     "name":"encorefloat",
+     "class":"solr.FloatPointField",
+  },
+  
+  {
+     "name":"encoreint",
+     "class":"solr.IntPointField",
+  },
+  
+  ],
+
+}' http://18.144.73.202:8983/solr/encorea/schema
+
+
+
+
+
+curl -X POST -H 'Content-type:application/json' --data-binary '{
+  "add-field":[
+  {
+     "name":"make",
+     "type":"encoreNGramTextField",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+  
+  {
+     "name":"makefaceted",
+     "type":"encorefaceted",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+
+  {
+     "name":"model",
+     "type":"encoreNGramTextField",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+  
+  {
+     "name":"modelfaceted",
+     "type":"encorefaceted",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+
+  {
+     "name":"product",
+     "type":"encoreNGramTextField",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+  
+  {
+     "name":"productfaceted",
+     "type":"encorefaceted",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"year",
+     "type":"encoreNGramTextFieldSm",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+  
+  {
+     "name":"yearfaceted",
+     "type":"encorefaceted",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  
+  {
+     "name":"originalequipmentpart",
+     "type":"encorepartnumber",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+  
+  {
+     "name":"originalequipmentpartfaceted",
+     "type":"encorefaceted",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"partnumber",
+     "type":"encorepartnumber",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+  
+  {
+     "name":"partnumberfaceted",
+     "type":"encorefaceted",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },  
+  
+  
+  {
+     "name":"engineliters",
+     "type":"encorefloat",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"enginecc",
+     "type":"encoreint",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+
+  {
+     "name":"enginecylinder",
+     "type":"encoreint",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+
+  {
+     "name":"engineblock",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"engineboreinch",
+     "type":"encorefloat",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+
+  {
+     "name":"engineboremetric",
+     "type":"encorefloat",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"enginestrokeinch",
+     "type":"encorefloat",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"engstrokemetric",
+     "type":"encorefloat",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"engine",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":true,
+     "docValues":false,
+  },
+
+  {
+     "name":"enginefaceted",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":true,
+     "docValues":true,
+  },
+  
+  {
+     "name":"imageprefix",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":false,
+     "docValues":false,
+  },  
+ 
+  {
+     "name":"numberofimages",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":false,
+     "docValues":false,
+  },  
+
+  {
+     "name":"imagesuffix",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":false,
+     "docValues":false,
+  },  
+  
+  ],
+  
+  
+  
+}' http://18.144.73.202:8983/solr/encorea/schema
+
+
+
+
+
+
+curl -X POST -H 'Content-type:application/json' --data-binary '{
+  "add-field":[
+
+  {
+     "name":"imageprefix",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":false,
+     "docValues":false,
+  },  
+ 
+  {
+     "name":"numberofimages",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":false,
+     "docValues":false,
+  },  
+
+  {
+     "name":"imagesuffix",
+     "type":"encorestring",
+     "stored":true,
+     "indexed":false,
+     "docValues":false,
+  },  
+  
+  ],
+}' http://18.144.73.202:8983/solr/encorea/schema
+
+
+
+RUN mkdir /opt/solr/server/solr/configsets/encore
+ADD /solr-data/conf /opt/solr/server/solr/configsets/encore
+
+
+
+
+
+
+sudo docker exec -it dcb93f75a03e bin/post -c encore1 /tmp/encore_make_only.csv -params "separator=;"
+
+
+
+
+
+
+./solr config -action set-property -property solr.data.dir -value "/solr_data/" -c "a" -zkHost 127.0.0.1:2181
+
+
