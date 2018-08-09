@@ -570,7 +570,14 @@ curl -X POST -H 'Content-type:application/json' --data-binary '{
      "indexed":"false",
      "stored":"true",
   },
-  
+
+  {
+     "name":"storecountry",
+     "type":"encorestring",
+     "indexed":"false",
+     "stored":"true",
+  },
+     
   {
      "name":"latlonlocation",
      "type":"encorelocation",

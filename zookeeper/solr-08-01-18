@@ -538,6 +538,13 @@ curl -X POST -H 'Content-type:application/json' --data-binary '{
   },
   
   {
+     "name":"storecountry",
+     "type":"encorestring",
+     "indexed":"false",
+     "stored":"true",
+  },
+
+  {
      "name":"latlonlocation",
      "type":"encorelocation",
      "indexed":"true",
