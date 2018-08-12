@@ -72,6 +72,9 @@ echo "SUFFIX: $SUFFIX"
 sudo yum install python3-pip -y
 sudo pip3 install django
 sudo pip3 install django-cors-headers
+sudo yum install docker -y
+sudo systemctl start docker
+sudo docker swarm init
 mkdir dockerstartup
 cd dockerstartup
 git clone https://github.com/btardio/encore-uwsgi.git
